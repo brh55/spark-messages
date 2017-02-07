@@ -1,0 +1,31 @@
+{
+  "name": "spark-messages",
+  "version": "0.0.0",
+  "description": "A collection of helpers to ensure consistent formatting of Cisco spark messages.",
+  "license": "MIT",
+  "repository": "brh55/spark-messages",
+  "author": {
+    "name": "Brandon Him",
+    "email": "brh55@drexel.edu",
+    "url": "github.com/brh55"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "require-all": "^2.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "xo": "^0.17.0"
+  }
+}
