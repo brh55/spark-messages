@@ -15,24 +15,39 @@ $ npm install --save spark-messages
 ```js
 const sm = require('spark-messages');
 
-sparkMessages('unicorns');
-//=> 'unicorns & rainbows'
+const message = `
+${sm.h1('🦄 Unicorn Town')}
+${sm.hr()}
+For more info, click ${sm.link('http://unicornland.com', 'here')}!`
+//=>
+# 🦄 Unicorn Town
+___
+For more info, click [here](http://unicornland.com)!
+
 ```
 
 #### Advance Usages
+Mass editing a set of links
 ```js
 const sm = require('spark-messages');
 
-const linksData = [
+const links = [
 	'http://google.com',
 	'http://facebook.com',
 	'http://instagram.com'
 ];
 
-sparkMessages('unicorns');
-//=> 'unicorns & rainbows'
+const mdLinks = links.map(sm.link);
+const boldLinks = mdLinks.map(sm.bold);
+const mdLinkList = sm.ol(boldLinks);
 
+// SHORT-HAND: sm.ol(links.map(raw => sm.link(sm.bold(raw))))
+// =>
+//   1. **<http://google.com>**
+//   2. **<http://facebook.com>**
+//   3. **<http://instagram.com>**
 ```
+
 ## API
 
 ### sparkMessages(input, [options])

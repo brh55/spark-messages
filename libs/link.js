@@ -12,13 +12,9 @@ function link(source, title) {
 		(source !== '' && title !== ''))  {
 		return `[${title}](${source})`;
 	}
-	return source;
+	return `<${source}>`;
 }
 
 function email(emailAddress) {
-	emailAddress = emailAddress || '';
-	if (typeof emailAddress === 'string' || emailAddress !== '') {
-		return `<${emailAddress}>`;
-	}
-	return emailAddress;
+	return link(email(emailAddress));
 }

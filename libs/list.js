@@ -9,14 +9,14 @@ module.exports = {
 };
 
 function buildList(items, prepender) {
-	if (isArray(items) && items.length > 0) {
+	if (Array.isArray(items) && items.length > 0) {
 		return items.map((item, index)=> {
 						if (prepender === 'count') {
 							return `${index + 1}. ${item}`;
 						}
 						return `${prepender} ${item}`
 					})
-					.toString().replace(',', `${br()}`);
+					.toString().replace(/,/g, `${br()}`);
 	}
 
 	return '';
