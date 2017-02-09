@@ -12,6 +12,11 @@ test('Headers', t => {
 	t.is(sm.h1({}), '');
 });
 
+test('Links', t => {
+	t.is(sm.link('http://google.com'), '<http://google.com>');
+	t.is(sm.link('http://google.com', 'Google'), '[Google](http://google.com)');
+});
+
 test('Combined usage', t => {
 	const links = [
 		'http://google.com',
