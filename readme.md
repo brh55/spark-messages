@@ -2,6 +2,12 @@
 
 > A collection of helpers to ensure consistent formatting of Cisco spark messages.
 
+`spark-messages` may be redudant in some regards, but there are some side-benefits:
+
+- Any changes to markdown interpretation is corrected outside of repositories
+- Ensure the usage of only a supported set of supported markdown
+- HTML-like methods
+- Consistency and programmability
 
 ## Install
 
@@ -47,26 +53,97 @@ const mdLinkList = sm.ol(boldLinks);
 //   2. **<http://facebook.com>**
 //   3. **<http://instagram.com>**
 ```
+## Elements
+### h*{n}*(text)
+> h1(text), h2(text), h3(text), h4(text), h5(text), h6(text)
 
-## API
-
-### sparkMessages(input, [options])
-
-#### input
+#### Text
 
 Type: `string`
 
-Lorem ipsum.
+Text to be a header.
 
-#### options
+### unorderedList(items)
+> *Alias:* ul(items)
 
-##### foo
+#### items
 
-Type: `boolean`<br>
-Default: `false`
+Type: `array`
 
-Lorem ipsum.
+List of items to be individually transformed to unordered list items.
 
+### orderedList(items)
+> *Alias:* ol(items)
+
+#### items
+
+Type: `array`
+
+List of items to be individually transformed to unordered list items.
+
+#### Text
+
+Type: `string`
+
+Text to be a header.
+
+### unorderedList(items)
+> **Alias:** ul(items)
+
+#### items
+
+Type: `array`
+
+List of items to be individually transformed to ordered list items.
+
+## Font Style
+
+### bold(text)
+> **Alias:** b()
+
+#### Text
+
+Type: `string`
+
+Text to be bolded.
+
+### italic(text)
+> **Alias:** i(text), em(text), emphasis(text)
+
+#### Text
+
+Type: `string`
+
+Text to be italicize.
+
+### code(text)
+> **Alias:**: c(text)
+
+#### Text
+
+Type: `string`
+
+Text to be transformed into a code style.
+
+### codeBlock(text)
+> **Alias:**: cb(text)
+
+#### Text
+
+Type: `string`
+
+Text to be transformed into a code block style.
+
+## Visual Elements
+### horizontalRule()
+> **Alias**: hr()
+
+*Returns a markdown horziontal rule (___).*
+
+### lineBreak()
+> **Alias**: br()
+
+*Returns a linebreak.*
 
 ## License
 
