@@ -1,12 +1,12 @@
 'use strict';
 module.exports = {
-	emphasis,
-	em: emphasis,
-	italic: emphasis,
-	i: emphasis
+	italic,
+	em: italic,
+	emphasis: italic,
+	i: italic
 };
 
-function emphasis(text) {
+function italic(text) {
 	text = text || '';
 	if (typeof text === 'string' && text !== '') {
 		return `*${text}*`;
