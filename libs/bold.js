@@ -2,7 +2,6 @@
 module.exports = {
 	bold,
 	b: bold,
-	em: bold
 };
 
 function bold(text) {
