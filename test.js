@@ -24,6 +24,6 @@ test('Combined usage', t => {
 		'http://instagram.com'
 	];
 
-	const mdLinks = sm.ol(links.map(raw => sm.bold(sm.link(raw))))
+	const mdLinks = sm.ol(links.map(raw => sm.bold(sm.link(raw))));
 	t.is(mdLinks, '1. **<http://google.com>**\n2. **<http://facebook.com>**\n3. **<http://instagram.com>**');
 });

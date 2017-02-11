@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
 	bold,
-	b: bold,
+	b: bold
 };
 
 function bold(text) {

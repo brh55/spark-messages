@@ -3,7 +3,7 @@ module.exports = {
 	code,
 	c: code,
 	codeBlock,
-	cb: codeBlock,
+	cb: codeBlock
 };
 
 function code(text) {

@@ -10,8 +10,8 @@ module.exports = {
 function link(source, title) {
 	title = title || '';
 	source = source || '';
-	if ((typeof source === 'string' && typeof title == 'string') &&
-		(source !== '' && title !== ''))  {
+	if ((typeof source === 'string' && typeof title === 'string') &&
+		(source !== '' && title !== '')) {
 		return `[${title}](${source})`;
 	}
 	return `<${source}>`;

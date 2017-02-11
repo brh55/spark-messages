@@ -4,6 +4,6 @@ module.exports = {
 	hr: horizontalRule
 };
 
-function horizontalRule () {
+function horizontalRule() {
 	return '___';
 }

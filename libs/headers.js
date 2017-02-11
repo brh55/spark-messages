@@ -1,5 +1,5 @@
 'use strict';
-const br = require('line-break').br;
+const br = require('./line-break').br;
 
 module.exports = {
 	// @TODO: Find a way to make this less redudant
