@@ -2,7 +2,9 @@
 module.exports = {
 	link,
 	anchor: link,
-	a: link
+	a: link,
+	email,
+	telephone
 };
 
 function link(source, title) {
@@ -16,5 +18,9 @@ function link(source, title) {
 }
 
 function email(emailAddress) {
-	return link(email(emailAddress));
+	return link(`mailto:${emailAddress}`, emailAddress);
+}
+
+function telephone(phoneNumber) {
+	return link(`tel:${phoneNumber}`, phoneNumber);
 }
