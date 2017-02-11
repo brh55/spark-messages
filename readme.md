@@ -4,9 +4,9 @@
 
 `spark-messages` may be redudant in some regards, but there are some side-benefits:
 
-- Any changes to markdown interpretation is corrected outside of repositories
+- Any changes to markdown interpretation is corrected outside of the bot's source
 - Ensure the usage of only a supported set of supported markdown
-- HTML-like methods
+- HTML-like methods for easy referencing
 - Consistency and programmability
 
 ## Install
@@ -63,6 +63,44 @@ Type: `string`
 
 Text to be a header.
 
+### link(href, title)
+> **Alias:** a(), anchor()
+
+#### href
+
+Type: `string`
+
+Url for the link
+
+#### title
+
+Type: `string`
+
+Mask for the link.
+
+### email(emailAddress)
+
+#### emailAddress
+
+Type: `string`
+
+Email address to create an link email. HTML equivalent = `<a href="mailto:emailaddress">emailAddress</a>`
+
+### telephone(telephoneNumber)
+> **Alias:** tel()
+
+#### telephoneNumber
+
+Type: `string`
+
+Telephone number to be an `tel:`.
+
+#### title
+
+Type: `string`
+
+Mask for the link.
+
 ### unorderedList(items)
 > *Alias:* ul(items)
 
@@ -87,6 +125,7 @@ Type: `string`
 
 Text to be a header.
 
+
 ### unorderedList(items)
 > **Alias:** ul(items)
 
@@ -99,7 +138,7 @@ List of items to be individually transformed to ordered list items.
 ## Font Style
 
 ### bold(text)
-> **Alias:** b()
+> Alias: b()
 
 #### Text
 
@@ -108,7 +147,7 @@ Type: `string`
 Text to be bolded.
 
 ### italic(text)
-> **Alias:** i(text), em(text), emphasis(text)
+> **Alias:**  i(text),  em(text),  emphasis(text)
 
 #### Text
 
@@ -117,7 +156,7 @@ Type: `string`
 Text to be italicize.
 
 ### code(text)
-> **Alias:**: c(text)
+> **Alias:** c(text)
 
 #### Text
 
@@ -126,7 +165,7 @@ Type: `string`
 Text to be transformed into a code style.
 
 ### codeBlock(text)
-> **Alias:**: cb(text)
+> **Alias:** cb(text)
 
 #### Text
 
@@ -136,12 +175,12 @@ Text to be transformed into a code block style.
 
 ## Visual Elements
 ### horizontalRule()
-> **Alias**: hr()
+> **Alias**:  hr()
 
 *Returns a markdown horziontal rule (___).*
 
 ### lineBreak()
-> **Alias**: br()
+> **Alias**:  br()
 
 *Returns a linebreak.*
 
