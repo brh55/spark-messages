@@ -1,4 +1,6 @@
 'use strict';
+const br = require('line-break').br;
+
 module.exports = {
 	// @TODO: Find a way to make this less redudant
 	h1: text => prependHash(text, 1),
@@ -17,7 +19,7 @@ function prependHash(text, numHash) {
 		hashs += '#';
 	}
 	if (typeof text === 'string' && text !== '') {
-		return `${hashs} ${text}`;
+		return `${hashs} ${text}${br()}`;
 	}
 	return '';
 }
