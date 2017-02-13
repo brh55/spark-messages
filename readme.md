@@ -71,6 +71,8 @@ Type: `string`
 
 Text to be a header.
 
+<br>
+
 ### link(href, title)
 > **Alias:** a(), anchor()
 
@@ -86,6 +88,8 @@ Type: `string`
 
 Mask for the link.
 
+<br>
+
 ### email(emailAddress, title)
 
 #### emailAddress
@@ -100,6 +104,7 @@ Type: `string`
 
 Mask for the email.
 
+<br>
 
 ### telephone(telephoneNumber, title)
 > **Alias:** tel()
@@ -116,6 +121,8 @@ Type: `string`
 
 Mask for the telephone number.
 
+<br>
+
 ### unorderedList(items)
 > *Alias:* ul(items)
 
@@ -124,6 +131,8 @@ Mask for the telephone number.
 Type: `array`
 
 List of items to be individually transformed to unordered list items.
+
+<br>
 
 ### orderedList(items)
 > *Alias:* ol(items)
@@ -134,12 +143,7 @@ Type: `array`
 
 List of items to be individually transformed to unordered list items.
 
-#### Text
-
-Type: `string`
-
-Text to be a header.
-
+<br>
 
 ### unorderedList(items)
 > **Alias:** ul(items)
@@ -161,6 +165,8 @@ Type: `string`
 
 Text to be bolded.
 
+<br>
+
 ### italic(text)
 > **Alias:**  i(text),  em(text),  emphasis(text)
 
@@ -170,6 +176,8 @@ Type: `string`
 
 Text to be italicize.
 
+<br>
+
 ### code(text)
 > **Alias:** c(text)
 
@@ -178,6 +186,8 @@ Text to be italicize.
 Type: `string`
 
 Text to be transformed into a code style.
+
+<br>
 
 ### codeBlock(text)
 > **Alias:** cb(text)
@@ -193,6 +203,8 @@ Text to be transformed into a code block style.
 > **Alias**:  hr()
 
 *Returns a markdown horziontal rule (___).*
+
+<br>
 
 ### lineBreak()
 > **Alias**:  br()
