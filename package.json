@@ -1,6 +1,6 @@
 {
   "name": "spark-messages",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A collection of helpers to ensure consistent formatting of Cisco spark messages.",
   "license": "MIT",
   "repository": "brh55/spark-messages",
