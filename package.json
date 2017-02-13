@@ -1,6 +1,6 @@
 {
   "name": "spark-messages",
-  "version": "0.0.0",
+  "version": "1.0.4",
   "description": "A collection of helpers to ensure consistent formatting of Cisco spark messages.",
   "license": "MIT",
   "repository": "brh55/spark-messages",
@@ -16,10 +16,14 @@
     "test": "xo && ava"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "libs"
   ],
   "keywords": [
-    ""
+    "spark",
+    "cisco",
+    "markdown",
+    "format library"
   ],
   "dependencies": {
     "require-all": "^2.1.0"

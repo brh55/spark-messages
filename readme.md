@@ -57,6 +57,10 @@ const mdLinkList = sm.ol(boldLinks);
 
 <img src="https://cloud.githubusercontent.com/assets/6020066/22878373/75f5423a-f18e-11e6-8e58-e583ef4e2011.png" width="690">
 
+## API
+
+Preview the [Spark Messages Wiki](https://github.com/brh55/spark-messages/wiki) for visual reference of Spark output and examples.
+
 ## Elements
 ### h*{n}*(text)
 > h1(text), h2(text), h3(text), h4(text), h5(text), h6(text)
