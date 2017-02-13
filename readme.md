@@ -138,7 +138,7 @@ List of items to be individually transformed to ordered list items.
 ## Font Style
 
 ### bold(text)
-> Alias: b()
+> Alias: b(), heavy()
 
 #### Text
 
