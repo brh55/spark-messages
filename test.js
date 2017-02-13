@@ -13,10 +13,10 @@ test('Headers', t => {
 });
 
 test('Links', t => {
-	t.is(sm.link('http://google.com'), '<http://google.com>');
+	t.is(sm.link('http://google.com'), '[http://google.com](http://google.com)');
 	t.is(sm.link('http://google.com', 'Google'), '[Google](http://google.com)');
-	t.is(sm.email('link@gmail.com'), '[link@gmail.com](mailto:link@gmail.com)');
-	t.is(sm.telephone('17303982999'), '[17303982999](tel:17303982999)');
+	t.is(sm.email('link@gmail.com'), '[link@gmail.com](mail:link@gmail.com)');
+	t.is(sm.telephone('17303982999'), '[17303982999](tel:+17303982999)');
 });
 
 test('Code', t => {
@@ -68,5 +68,5 @@ test('Ordered list', t => {
 
 test('Combined usage', t => {
 	const mdLinks = sm.ol(links.map(raw => sm.bold(sm.link(raw))));
-	t.is(mdLinks, '\n1. **<http://google.com>**\n2. **<http://facebook.com>**\n3. **<http://instagram.com>**\n');
+	t.is(mdLinks, '\n1. **[http://google.com](http://google.com)**\n2. **[http://facebook.com](http://facebook.com)**\n3. **[http://instagram.com](http://instagram.com)**\n');
 });

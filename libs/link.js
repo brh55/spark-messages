@@ -7,20 +7,26 @@ module.exports = {
 	telephone
 };
 
-function link(source, title) {
+function link(href, title) {
 	title = title || '';
-	source = source || '';
-	if ((typeof source === 'string' && typeof title === 'string') &&
-		(source !== '' && title !== '')) {
-		return `[${title}](${source})`;
+	href = href || '';
+	if ((typeof href === 'string' && typeof title === 'string') &&
+		(href !== '' && title !== '')) {
+		return `[${title}](${href})`;
 	}
-	return `<${source}>`;
+	return `[${href}](${href})`;
 }
 
-function email(emailAddress) {
-	return link(`mailto:${emailAddress}`, emailAddress);
+function email(emailAddress, title) {
+	if (!title) {
+		return link(`mail:${emailAddress}`, emailAddress);
+	}
+	return link(`mail:${emailAddress}`, title);
 }
 
-function telephone(phoneNumber) {
-	return link(`tel:${phoneNumber}`, phoneNumber);
+function telephone(phoneNumber, title) {
+	if (!title) {
+		return link(`tel:+${phoneNumber}`, phoneNumber);
+	}
+	return link(`tel:+${phoneNumber}`, title);
 }
