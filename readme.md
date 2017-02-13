@@ -4,10 +4,10 @@
 
 `spark-messages` may be redudant in some regards, but there are some side-benefits:
 
-- Any changes to markdown interpretation is corrected outside of the bot's source
-- Ensure the usage of only a supported set of supported markdown
-- HTML-like methods for easy referencing
-- Consistency and programmability
+- Any changes to markdown interpretation is corrected outside of source code
+- Ensure the usage of only a supported set of markdown -- no need to "guess and check"
+- `HTML/CSS`-like methods for easier referencing and implicit behavior
+- Programmability
 
 ## Install
 
