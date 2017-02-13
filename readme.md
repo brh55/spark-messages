@@ -15,7 +15,6 @@
 $ npm install --save spark-messages
 ```
 
-
 ## Usage
 
 ```js
@@ -31,6 +30,8 @@ ___
 For more info, click [here](http://unicornland.com)!
 
 ```
+
+<img src="https://cloud.githubusercontent.com/assets/6020066/22878113/44fb2754-f18d-11e6-90f6-c28fd20aae9a.png" width="650">
 
 #### Advance Usages
 Mass editing a set of links
@@ -53,6 +54,9 @@ const mdLinkList = sm.ol(boldLinks);
 //   2. **<http://facebook.com>**
 //   3. **<http://instagram.com>**
 ```
+
+<img src="https://cloud.githubusercontent.com/assets/6020066/22878373/75f5423a-f18e-11e6-8e58-e583ef4e2011.png" width="690">
+
 ## Elements
 ### h*{n}*(text)
 > h1(text), h2(text), h3(text), h4(text), h5(text), h6(text)
@@ -78,7 +82,7 @@ Type: `string`
 
 Mask for the link.
 
-### email(emailAddress)
+### email(emailAddress, title)
 
 #### emailAddress
 
@@ -86,7 +90,14 @@ Type: `string`
 
 Email address to create an link email. HTML equivalent = `<a href="mailto:emailaddress">emailAddress</a>`
 
-### telephone(telephoneNumber)
+#### title
+
+Type: `string`
+
+Mask for the email.
+
+
+### telephone(telephoneNumber, title)
 > **Alias:** tel()
 
 #### telephoneNumber
@@ -99,7 +110,7 @@ Telephone number to be an `tel:`.
 
 Type: `string`
 
-Mask for the link.
+Mask for the telephone number.
 
 ### unorderedList(items)
 > *Alias:* ul(items)
