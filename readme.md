@@ -124,7 +124,7 @@ Mask for the telephone number.
 <br>
 
 ### unorderedList(items)
-> *Alias:* ul(items)
+> **Alias:** ul(items)
 
 #### items
 
@@ -135,7 +135,7 @@ List of items to be individually transformed to unordered list items.
 <br>
 
 ### orderedList(items)
-> *Alias:* ol(items)
+> **Alias:** ol(items)
 
 #### items
 
@@ -157,7 +157,7 @@ List of items to be individually transformed to ordered list items.
 ## Font Style
 
 ### bold(text)
-> Alias: b(), heavy()
+> **Alias:** b(), heavy()
 
 #### Text
 
