@@ -58,12 +58,25 @@ const links = [
 	'http://instagram.com'
 ];
 
+const nestedLinks = [
+	'http://google.com',
+	'http://facebook.com',
+	'http://instagram.com',
+	[
+		'http://instagram.com/test',
+		'http://instagram.com/test2',
+		'http://instagram.com/test3'
+	]
+];
+
 test('Unordered list', t => {
 	t.is(sm.ul(links), '\n- http://google.com\n- http://facebook.com\n- http://instagram.com\n');
+	t.is(sm.ul(nestedLinks), '\n- http://google.com\n- http://facebook.com\n- http://instagram.com\n\n    - http://instagram.com/test\n    - http://instagram.com/test2\n    - http://instagram.com/test3\n\n');
 });
 
 test('Ordered list', t => {
 	t.is(sm.ol(links), '\n1. http://google.com\n2. http://facebook.com\n3. http://instagram.com\n');
+	t.is(sm.ol(nestedLinks), '\n1. http://google.com\n2. http://facebook.com\n3. http://instagram.com\n\n    1. http://instagram.com/test\n    2. http://instagram.com/test2\n    3. http://instagram.com/test3\n\n');
 });
 
 test('Combined usage', t => {

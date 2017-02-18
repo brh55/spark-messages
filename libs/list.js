@@ -8,13 +8,18 @@ module.exports = {
 	ol: orderedList
 };
 
-function buildList(items, prepender) {
+function buildList(items, prepender, indenter) {
+	indenter = indenter || '';
 	if (Array.isArray(items) && items.length > 0) {
 		const list = items.map((item, index) => {
-			if (prepender === 'count') {
-				return `${index + 1}. ${item}`;
+			if (Array.isArray(item)) {
+				return buildList(item, prepender, '    ');
 			}
-			return `${prepender} ${item}`;
+
+			if (prepender === 'count') {
+				return `${indenter}${index + 1}. ${item}`;
+			}
+			return `${indenter}${prepender} ${item}`;
 		}).toString().replace(/,/g, `${br()}`);
 
 		return `${br()}${list}${br()}`;
